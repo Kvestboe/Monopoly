@@ -1,13 +1,13 @@
-package com.dataingengjoer.monopoly.model.spaces;
+package com.dataingengjoer.monopoly.model.tiles;
 
 import com.dataingengjoer.monopoly.model.Player;
 
-public abstract class Space {
+public abstract class Tile {
     private String name;
 
-    public Space(String name) {
+    public Tile(String name) {
         this.name = name;
     }
 
-    public abstract void onLand(Player player);
+    public void onLand(Player player) {}
 }

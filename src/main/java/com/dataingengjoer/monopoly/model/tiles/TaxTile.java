@@ -1,11 +1,11 @@
-package com.dataingengjoer.monopoly.model.spaces;
+package com.dataingengjoer.monopoly.model.tiles;
 
 import com.dataingengjoer.monopoly.model.Player;
 
-public class TaxSpace extends Space {
+public class TaxTile extends Tile {
     private int taxAmount;
 
-    public TaxSpace(String name, int taxAmount) {
+    public TaxTile(String name, int taxAmount) {
         super(name);
         this.taxAmount = taxAmount;
     }

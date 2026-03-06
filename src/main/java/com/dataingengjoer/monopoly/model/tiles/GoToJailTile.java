@@ -2,13 +2,13 @@ package com.dataingengjoer.monopoly.model.tiles;
 
 import com.dataingengjoer.monopoly.model.Player;
 
-public class JailTile extends Tile {
-    public JailTile(String name) {
+public class GoToJailTile extends Tile {
+    public GoToJailTile(String name) {
         super(name);
     }
 
     @Override
     public void onLand(Player player) {
-        // Mangler implementasjon
+        player.arrest();
     }
 }

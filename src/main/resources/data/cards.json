@@ -1,0 +1,16 @@
+[
+  {
+    "type": "moneyCard",
+    "description": "Bank pays you dividend of $50",
+    "amount": 50
+  },
+  {
+    "type": "moveCard",
+    "description": "Go back 3 spaces",
+    "steps": -3
+  },
+  {
+    "type": "jailCard",
+    "description": "Go to jail"
+  }
+]

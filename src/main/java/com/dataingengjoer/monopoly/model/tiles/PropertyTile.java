@@ -1,12 +1,12 @@
-package com.dataingengjoer.monopoly.model.spaces;
+package com.dataingengjoer.monopoly.model.tiles;
 
 import com.dataingengjoer.monopoly.model.Player;
 
-public class PropertySpace extends Space {
+public class PropertyTile extends Tile {
     private int price;
     private Player owner;
 
-    public PropertySpace(String name, int price) {
+    public PropertyTile(String name, int price) {
         super(name);
         this.price = price;
     }
