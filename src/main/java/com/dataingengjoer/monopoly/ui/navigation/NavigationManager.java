@@ -4,11 +4,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
 
-public class Navigation {
-	private static final Navigation instance = new Navigation();
+public class NavigationManager {
+	private static final NavigationManager instance = new NavigationManager();
 	private StackPane root;
 
-	public Navigation(){}
+	private NavigationManager(){}
+
+	public static NavigationManager getInstance() {
+		return instance;
+	}
 
 	public void setRoot(StackPane root) {
 		this.root = root;
@@ -17,12 +21,12 @@ public class Navigation {
 	public void navigate(String path) {
 		try {
 			String fxml = switch (path) {
-				case "game" -> "src/main/resources/com.dataingengjoer.monopoly/ui/screen/GameScreen.fxml";
-				case "menu" -> "src/main/resources/com.dataingengjoer.monopoly/ui/screen/MenuScreen.fxml";
+				case "game" -> "/com.dataingengjoer.monopoly/ui/screen/GameScreen.fxml";
+				case "menu" -> "/com.dataingengjoer.monopoly/ui/screen/MenuScreen.fxml";
 				default -> throw new IllegalArgumentException("No path by: " + path);
 			};
 
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/" + path));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
 			Node view = loader.load();
 			root.getChildren().addAll(view);
 
