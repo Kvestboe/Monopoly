@@ -28,10 +28,10 @@ public class NavigationManager {
 
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
 			Node view = loader.load();
-			root.getChildren().addAll(view);
+			root.getChildren().setAll(view);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException("Navigation failed for: " + path, e);
 		}
 	}
 
