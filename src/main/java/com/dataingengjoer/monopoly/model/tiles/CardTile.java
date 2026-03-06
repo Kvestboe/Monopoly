@@ -1,13 +1,13 @@
-package com.dataingengjoer.monopoly.model.spaces;
+package com.dataingengjoer.monopoly.model.tiles;
 
 import com.dataingengjoer.monopoly.model.Deck;
 import com.dataingengjoer.monopoly.model.Player;
 import com.dataingengjoer.monopoly.model.cards.Card;
 
-public class CardSpace extends Space {
+public class CardTile extends Tile {
     private Deck deck;
 
-    public CardSpace(String name, Deck deck) {
+    public CardTile(String name, Deck deck) {
         super(name);
         this.deck = deck;
     }

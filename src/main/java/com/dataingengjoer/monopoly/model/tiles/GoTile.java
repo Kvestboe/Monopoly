@@ -2,8 +2,8 @@ package com.dataingengjoer.monopoly.model.tiles;
 
 import com.dataingengjoer.monopoly.model.Player;
 
-public class JailTile extends Tile {
-    public JailTile(String name) {
+public class GoTile extends Tile {
+    public GoTile(String name) {
         super(name);
     }
 
